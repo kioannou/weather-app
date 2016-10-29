@@ -32,7 +32,7 @@ var HomeController = function ($scope, $rootScope, Weather, ngDialog) {
     });
 
     var init = function () {
-        if (sessionStorage.getItem("weather-data")) {
+        if (sessionStorage.getItem("weather-data") && (JSON.parse(sessionStorage.getItem("weather-data").list.length > 0))) {
             $scope.forecastData = JSON.parse(sessionStorage.getItem("weather-data"));
         } else {
             Weather.getForecast(function (response) {

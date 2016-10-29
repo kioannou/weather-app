@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <!--table showing the weather-->
-<div class="panel panel-default">
+<div class="panel panel-default" ng-if="forecastData && forecastData.list.length > 0">
 
     <!-- Default panel contents -->
     <div class="panel-heading">
@@ -9,7 +9,7 @@
     </div>
 
     <!-- Table -->
-    <table class="table table-striped weather-table" ng-if="forecastData && forecastData.list.length > 0">
+    <table class="table table-striped weather-table">
 
         <!--Header row-->
         <tr class="top-row">
@@ -56,14 +56,10 @@
             </td>
         </tr>
     </table>
+</div>
 
-    <!--Back up table-->
-    <table ng-if="!forecastData || forecastData.list.length === 0">
-        <tr>
-            <td colspan='8' class="nodata-indication">
-                No data show!
-            </td>
-        </tr>
-    </table>
-
+<div class="panel panel-default" ng-if="!forecastData || forecastData.list.length === 0">
+    <div class="nodata-indication">
+        No data show!
+    </div>
 </div>
