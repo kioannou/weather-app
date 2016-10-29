@@ -1,0 +1,27 @@
+.main-container{
+    margin-top: 60px;
+}
+
+.weather-table{
+    text-align: center;
+}
+
+.top-row{
+    font-weight: 600;
+}
+
+.edit-modal-header{
+    text-align: center;
+}
+.edit-modal-buttons{
+    text-align: center;
+}
+.bottom-row{
+    text-align: center;
+}
+.nodata-indication{
+    text-align: center;
+    margin-top: 20%;
+    font-size: 50px;
+    color: darkgrey;
+}

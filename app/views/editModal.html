@@ -1,0 +1,48 @@
+<div class="edit-modal-header">
+    <h5>Edit forecast data</h5>
+</div>
+<form>
+    <!--Description-->
+    <div class="form-group">
+        <label for="description">Description</label>
+        <input class="form-control" id="description" placeholder="Description"
+               ng-model="forecastData.list[selectedForecastIndex].weather[0].description">
+    </div>
+
+    <!--Max temp-->
+    <div class="form-group">
+        <label for="max-temp">Max temp.</label>
+        <input class="form-control" id="max-temp" placeholder="Max temperature"
+               ng-model="forecastData.list[selectedForecastIndex].main.temp_max">
+    </div>
+
+    <!--Min temp-->
+    <div class="form-group">
+        <label for="min-temp">Min temp.</label>
+        <input class="form-control" id="min-temp" placeholder="Min temperature"
+               ng-model="forecastData.list[selectedForecastIndex].main.temp_min">
+    </div>
+
+    <!--Humidity-->
+    <div class="form-group">
+        <label for="humidity">Humidity</label>
+        <input class="form-control" id="humidity" placeholder="Humidity"
+               ng-model="forecastData.list[selectedForecastIndex].main.humidity">
+    </div>
+
+    <!--Wind-->
+    <div class="form-group">
+        <label for="wind">Wind</label>
+        <input class="form-control" id="wind" placeholder="Wind"
+               ng-model="forecastData.list[selectedForecastIndex].wind.speed">
+    </div>
+
+</form>
+<div class="row edit-modal-buttons">
+    <div class="col col-sm-6">
+        <button class="btn btn-danger btn-block" ng-click="closeThisDialog(0)">Close</button>
+    </div>
+    <div class="col col-sm-6">
+        <button class="btn btn-primary btn-block" ng-click="confirm(1)">Save</button>
+    </div>
+</div>
