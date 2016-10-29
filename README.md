@@ -1,6 +1,6 @@
 # weather-app
 
-An angular SPA application
+An angular-browserify-gulp application.
 
 Made by Ioannou Konstantinos
 
