@@ -2,7 +2,7 @@ var HomeController = function ($scope, $rootScope, Weather, ngDialog) {
 
     //$scope variables
     angular.extend($scope, {
-        forecastData: [],
+        forecastData: undefined,
         selectedForecastIndex: undefined,
         averageTemperature: 0
     });
@@ -32,13 +32,15 @@ var HomeController = function ($scope, $rootScope, Weather, ngDialog) {
     });
 
     var init = function () {
-        if (sessionStorage.getItem("weather-data") && (JSON.parse(sessionStorage.getItem("weather-data").list.length > 0))) {
+        if (sessionStorage.getItem("weather-data")) {
             $scope.forecastData = JSON.parse(sessionStorage.getItem("weather-data"));
         } else {
             Weather.getForecast(function (response) {
                 console.warn("The response is: ", response);
-                $scope.forecastData = response;
-                sessionStorage.setItem("weather-data", JSON.stringify($scope.forecastData));
+                if(response){
+                    $scope.forecastData = response;
+                    sessionStorage.setItem("weather-data", JSON.stringify($scope.forecastData));
+                }
             });
         }
     };

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <!--table showing the weather-->
-<div class="panel panel-default" ng-if="forecastData && forecastData.list.length > 0">
+<div class="panel panel-default" ng-if="forecastData">
 
     <!-- Default panel contents -->
     <div class="panel-heading">
@@ -58,7 +58,7 @@
     </table>
 </div>
 
-<div class="panel panel-default" ng-if="!forecastData || forecastData.list.length === 0">
+<div class="panel panel-default" ng-if="!forecastData">
     <div class="nodata-indication">
         No data show!
     </div>
