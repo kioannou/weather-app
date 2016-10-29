@@ -2,7 +2,6 @@
   "name": "weather-app",
   "version": "1.0.0",
   "description": "Weather app made with angular",
-  "main": "index.js",
   "scripts": {
     "build": "gulp && gulp serve",
     "debug":"gulp debug && gulp serve-debug"
