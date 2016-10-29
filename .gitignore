@@ -3,8 +3,5 @@ node_modules
 public
 app/css/bootstrap.*
 *.DS_Store
-/app/js/controllers/cart-backup.js
-/app/js/services/Cart-backup.js
-/app/css/ng-notify.min.css
 /app/css/ngDialog.min.css
 /app/css/ngDialog-theme-default.min.css
