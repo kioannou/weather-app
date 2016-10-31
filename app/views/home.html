@@ -27,7 +27,7 @@
 
         <tr ng-repeat="forecastItem in forecastData.list track by $index" ng-if="$index % 2 == 0">
             <!--Time-->
-            <td>{{forecastItem.dt | date:'dd/M/yyyy - H:mm' : 'UTC'}}</td>
+            <td>{{forecastItem.dt * 1000 | date:'dd/M/yyyy - H:mm' : 'UTC'}}</td>
             <!--Main weather-->
             <td>{{forecastItem.weather[0].main}}</td>
             <!--Description-->
